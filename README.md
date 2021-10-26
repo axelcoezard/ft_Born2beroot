@@ -113,3 +113,8 @@ PASS_WARN_AGE 7
 ```
 Il faut ensuite redemarrer la machine.
 
+## 3. Le script Monitoring.sh
+
+Le script [monitoring.sh](../monitoring.sh) est visible dans ce repository en [cliquant ici](./monitoring.sh).
+
+## 4. Configuration de contab
