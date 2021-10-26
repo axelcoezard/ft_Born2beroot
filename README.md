@@ -84,7 +84,7 @@ Defaults	requiretty
 Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
 
-### Securite forte pour les mots de passes
+### Securite forte pour les mots de passe
 
 Installer `libpam-pwquality` et acceder au fichier config:
 ```console
@@ -92,9 +92,9 @@ sudo apt-get install libpam-pwquality
 sudo nano /etc/pam.d/common-password
 ```
 
-puis ajouter a la ligne `password requisite pam_pwqiality.so retry=3` les parametres suivants:
+puis ajouter a la ligne `password requisite pam_pwquality.so retry=3` les parametres suivants:
 ```
-minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
+minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username usercheck=-1 difok=7 enforce_for_root
 ```
 
 Reste a changer les mots de passes pour suivre ces conventions:
