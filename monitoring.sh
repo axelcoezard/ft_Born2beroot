@@ -15,5 +15,15 @@ networkMAC=`ip a | grep link/ether | cut -d ' ' -f6`
 sudo=``
 
 wall $'#Achitecture:' "$architecture" \
-$'\nCPU physical :' "$pCPU" \
-$'\nvCPU :' "$vCPU"
+$'\n#CPU physical :' "$pCPU" \
+$'\n#vCPU :' "$vCPU" \
+$'\n#Memory Usage:' \
+$'\n#Disk Usage:' \
+$'\n#CPU Load:' \
+$'\n#Last boot:' "$lastboot" \
+$'\n#LVM use:' \
+$'\n#Connexions TCP :' \
+$'\n#User log:' \
+$'\n#Network:' "$networkIP"' ('"$networkMAC"')' \
+$'\n#Sudo :'
+
