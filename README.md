@@ -1,7 +1,9 @@
 # ft_Born2BeRoot
 Mon projet Born2BeRoot de 42.
 
-## Configuration de la VM
+## 1. Installation de la VM
+
+## 2. Configuration de la VM
 ### Installation de sudo
 
 On commemnce par installer sudo et ajouter <username>
@@ -47,17 +49,19 @@ sudo apt install ufw
 sudo ufw enable
 ```
 
-On configure l'access via le port 4242:
+On configure l'access via le port `4242`:
 ```console
 sudo ufw allow ssh
 sudo ufw allow 4242
 sudo ufw status
 ```
 
-On supprime l'acces via le port 22:
+On supprime l'acces via le port `22`:
 ```console
 sudo ufw status numbered	(pour trouver l'indice des port a supprimer)
 sudo ufw delete <index>
 ```
 
 Reste a autoriser via VirtualBox le fowrding du port 4242.
+
+###
