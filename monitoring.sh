@@ -5,7 +5,7 @@ pCPU=`grep "physical id" /proc/cpuinfo | wc -l`
 vCPU=`grep "processor" /proc/cpuinfo | wc -l`
 memory=`free -m | awk 'NR==2{printf "%s/%sMB (%.2f%%)", $3,$2,$3*100/$2 }'`
 disk=`df -h | awk '$NF=="/"{printf "%d/%dGB (%s)", $3,$2,$5}'`
-lCPU=`top -bn1 | grep load | awk '{printf "%.1f%%\n", $(NF-2)}'`
+lCPU=`top -bn1 | grep load | awk '{printf "%.1f%%\n", $(NF-2) * 100}'`
 lastboot=`who -b | cut -c23-`
 lvmuse=`lsblk |grep lvm | awk '{if ($1) {print "yes";exit;} else {print "no"} }'`
 tcp=`netstat -an | grep ESTABLISHED |  wc -l`
