@@ -24,6 +24,6 @@ $'\n#Last boot:' "$lastboot" \
 $'\n#LVM use:' "$lvmuse"\
 $'\n#Connexions TCP :' "$tcp"\
 $'\n#User log:' "$userlog"\
-$'\n#Network:' "$networkIP"'('"$networkMAC"')' \
+$'\n#Network: IP' "$networkIP"'('"$networkMAC"')' \
 $'\n#Sudo :' "$sudo"
 
