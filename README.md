@@ -58,10 +58,28 @@ sudo ufw status
 
 On supprime l'acces via le port `22`:
 ```console
-sudo ufw status numbered	(pour trouver l'indice des port a supprimer)
+sudo ufw status numbered	#liste les ports ouverts
 sudo ufw delete <index>
 ```
 
 Reste a autoriser via VirtualBox le fowrding du port 4242.
 
-###
+### Configuration de sudo
+
+On cree les fichiers suivant:
+```console
+sudo touch /etc/sudoers.d/sudoconfig
+sudo mkdir /var/log/sudo
+sudo nano /ec/sudoers.d/sudoconfig
+```
+
+et on les remplit comme suit:
+```
+Defaults	passwd_tries=3
+Defaults	badpass_message="Mot de passe incorrect."
+Defaults	log_input
+Defaults	log_output
+Defaults	iolog_dir="/var/log/sudo"
+Defaults	requiretty
+Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+```
