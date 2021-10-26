@@ -84,7 +84,7 @@ Defaults	requiretty
 Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
 
-### Securite forte pour les mots de passe
+### Securite forte des mots de passe
 
 Installer `libpam-pwquality` et acceder au fichier config:
 ```console
@@ -103,5 +103,13 @@ passwd		# Changer mot de passe utilisateur
 sudo passwd	# Changer mot de passe root
 ```
 
+### Expiration des mots de passe
 
+Acceder au fichier `/etc/login.defs`, trouver `PASS_MAX_DAYS`, `PASS_MIN_DAYS`, `PASS_WARN_AGE` et les modifier avec les valeurs suivantes:
+```console
+PASS_MAX_DAYS 30
+PASS_MIN_DAYS 2
+PASS_WARN_AGE 7
+```
+Il faut ensuite redemarrer la machine.
 
