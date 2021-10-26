@@ -115,6 +115,36 @@ Il faut ensuite redemarrer la machine.
 
 ## 3. Le script Monitoring.sh
 
+Installer `` avant de faire le script, pour avoir acces au commandes reseau:
+```console
+sudo apt-get install -y net-tools
+```
+
 Le script [monitoring.sh](../monitoring.sh) est visible dans ce repository en [cliquant ici](./monitoring.sh).
 
 ## 4. Configuration de contab
+
+Ajouter le script `monitoring.sh` au fichier sudoers pour lui donner les droits d'acces a certaines commandes. Ouvrir le fichier:
+```console
+sudo visudo
+```
+
+puis rajouter cette ligne dans `allow members [...] to execute any command`:
+```console
+<username>	ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh
+```
+
+Copier le fichier `monitoring.sh` vers `/usr/local/bin/`, redemarrer la machine et l'executer pour le tester.
+```console
+sudo /usr/local/bin/monitoring.sh
+```
+
+Enfin, ouvrir `crontab`:
+```console
+sudo crontab -u root -e
+```
+
+et ajouter la ligne:
+```
+*/10	*	*	*	*	/usr/local/bin/monitoring.sh
+```
