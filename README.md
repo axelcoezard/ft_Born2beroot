@@ -70,7 +70,7 @@ On cree les fichiers suivant:
 ```console
 sudo touch /etc/sudoers.d/sudoconfig
 sudo mkdir /var/log/sudo
-sudo nano /ec/sudoers.d/sudoconfig
+sudo nano /etc/sudoers.d/sudoconfig
 ```
 
 et on les remplit comme suit:
