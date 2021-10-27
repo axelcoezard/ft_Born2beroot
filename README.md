@@ -6,7 +6,7 @@ Mon projet Born2BeRoot de 42.
 ## 2. Configuration de la VM
 ### Installation de sudo
 
-On commemnce par installer sudo et ajouter <username>
+On commencer par installer `sudo` et ajouter <username>
 au groupe sudo:
 
 ```console
@@ -115,14 +115,14 @@ Il faut ensuite redemarrer la machine.
 
 ## 3. Le script Monitoring.sh
 
-Installer `` avant de faire le script, pour avoir acces au commandes reseau:
+Installer `net-tools` avant de faire le script, pour avoir acces au commandes reseau:
 ```console
 sudo apt-get install -y net-tools
 ```
 
 Le script [monitoring.sh](../monitoring.sh) est visible dans ce repository en [cliquant ici](./monitoring.sh).
 
-## 4. Configuration de contab
+## 4. Configuration de crontab
 
 Ajouter le script `monitoring.sh` au fichier sudoers pour lui donner les droits d'acces a certaines commandes. Ouvrir le fichier:
 ```console
