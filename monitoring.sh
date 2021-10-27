@@ -12,7 +12,7 @@ tcp=`netstat -an | grep ESTABLISHED |  wc -l`
 userlog=`who | cut -d " " -f 1 | sort -u | wc -l`
 networkIP=`hostname -I`
 networkMAC=`ip a | grep link/ether | cut -d ' ' -f6`
-sudo=`grep 'sudo ' /var/log/auth.log | wc -l`
+sudo=`journalctl _COMM=sudo | grep COMMAND | wc -l`
 
 wall $'#Achitecture:' "$architecture" \
 $'\n#CPU physical :' "$pCPU" \
