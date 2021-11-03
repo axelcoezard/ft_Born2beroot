@@ -1,9 +1,13 @@
-# ft_Born2BeRoot
-Mon projet Born2BeRoot de 42.
+# ft_Born2beroot
+Mon projet Born2beroot de 42.
 
-## 1. Installation de la VM
+## Résumé
+> Ce projet a pour but de vous faire découvrir le merveilleux monde de la virtualisation.
 
-## 2. Configuration de la VM
+## Note
+![Born2beroot grade](https://badge42.herokuapp.com/api/project/acoezard/Born2beroot)
+
+## Configuration
 ### Installation de sudo
 
 On commencer par installer `sudo` et ajouter <username>
@@ -113,7 +117,7 @@ PASS_WARN_AGE 7
 ```
 Il faut ensuite redemarrer la machine.
 
-## 3. Le script Monitoring.sh
+### Le script Monitoring.sh
 
 Installer `net-tools` avant de faire le script, pour avoir acces au commandes reseau:
 ```console
@@ -122,7 +126,7 @@ sudo apt-get install -y net-tools
 
 Le script [monitoring.sh](../monitoring.sh) est visible dans ce repository en [cliquant ici](./monitoring.sh).
 
-## 4. Configuration de crontab
+### Configuration de crontab
 
 Ajouter le script `monitoring.sh` au fichier sudoers pour lui donner les droits d'acces a certaines commandes. Ouvrir le fichier:
 ```console
