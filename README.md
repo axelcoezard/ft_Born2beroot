@@ -1,4 +1,4 @@
-# ft_Born2beroot
+# Born2beroot
 Mon projet Born2beroot de 42.
 
 ## Résumé
